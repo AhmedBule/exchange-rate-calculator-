@@ -1,21 +1,24 @@
+const currencyEl_one = document.getElementById('currency-one');
+const amountEl_one = document.getElementById('amount-one');
+const currencyEl_two = document.getElementById('currency-two');
+const amountEl_two = document.getElementById('amount-two');
+
+const rateEl = document.getElementById('rate');
+const swap = document.getElementById('swap');
+
+
+// Fetch exchange rates and update the DOM
 function calculate() {
 
-    //fetch('items.json')   An example of get request
+    // Event listeners 
+    currencyEl_one.addEventListener('change', calculate);
+    amountEl_one.addEventListener('input', calculate);
+    currencyEl_two.addEventListener('change', calculate);
+    amountEl_two.addEventListener('input', calculate)
 
-    fetch('items.json')
-        .then(res => res.json())
-        .then(data => console.log(data));
 
 
-    // This runs asynchronslly, which means it runs in the background and it returns a promise. 
 
-    // The way we catch a promise is .then
-    // The .then will give us a response. 
-
-    // 200 status means it is working perfectly. 
-    //300 is redirect 
-    //400 is user error
-    //500 is server error 
 
 }
 
