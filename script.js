@@ -9,17 +9,16 @@ const swap = document.getElementById('swap');
 
 // Fetch exchange rates and update the DOM
 function calculate() {
+    const currency_one = currencyEl_one.value;
+    const currency_two = currencyEl_two.value
 
-    // Event listeners 
-    currencyEl_one.addEventListener('change', calculate);
-    amountEl_one.addEventListener('input', calculate);
-    currencyEl_two.addEventListener('change', calculate);
-    amountEl_two.addEventListener('input', calculate)
-
-
-
-
-
+    console.log(currency_one, currency_two)
 }
+// Event listeners 
+currencyEl_one.addEventListener('change', calculate);
+amountEl_one.addEventListener('input', calculate);
+currencyEl_two.addEventListener('change', calculate);
+amountEl_two.addEventListener('input', calculate)
+
 
 calculate();
