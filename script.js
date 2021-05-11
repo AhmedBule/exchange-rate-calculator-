@@ -10,9 +10,14 @@ const swap = document.getElementById('swap');
 // Fetch exchange rates and update the DOM
 function calculate() {
     const currency_one = currencyEl_one.value;
-    const currency_two = currencyEl_two.value
+    const currency_two = currencyEl_two.value;
 
-    console.log(currency_one, currency_two)
+    fetch(`https://v6.exchangerate-api.com/v6/868516ee3ed55d6d7a3a5724/latest/AUD${currency_one}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        });
+
 }
 // Event listeners 
 currencyEl_one.addEventListener('change', calculate);
@@ -22,3 +27,6 @@ amountEl_two.addEventListener('input', calculate)
 
 
 calculate();
+
+
+// 868516ee3ed55d6d7a3a5724
