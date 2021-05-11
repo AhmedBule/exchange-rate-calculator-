@@ -12,10 +12,15 @@ function calculate() {
     const currency_one = currencyEl_one.value;
     const currency_two = currencyEl_two.value;
 
-    fetch(`https://v6.exchangerate-api.com/v6/868516ee3ed55d6d7a3a5724/latest/AUD${currency_one}`)
+    fetch(`https://v6.exchangerate-api.com/v6/868516ee3ed55d6d7a3a5724/latest/${currency_one}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            //  console.log(data);
+
+            const rate = data.conversion_rates[currency_two];
+            //console.log(rate);
+
+            rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`
         });
 
 }
