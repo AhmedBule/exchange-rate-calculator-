@@ -9,7 +9,7 @@ An Exchange Rate calculator that uses ExchangeRate API and Fetch API. Users are 
 
 ## Visuals and Video
 
-[![Video of the project](images/sample-image.png)(images/sample-image2.png)(https://youtu.be/dsemwX2TFvQ)]
+[![Video of the project](images/sample-image.png)(https://youtu.be/dsemwX2TFvQ)]
 
 
 ## Usage
